@@ -1,0 +1,146 @@
+.headerProfileSec {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  margin-top: 30px;
+  padding: 20px;
+  width: 100%;
+}
+
+.headerProfileSec .profileImg {
+  width: 80px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+.headerProfileSec .name {
+  font: 16px poppinsSb;
+}
+.headerProfileSec .text {
+  font: 14px poppins;
+}
+.bookAndReview .reviewRow {
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 40px 30px;
+}
+
+.bookAndReview .inputDiv {
+  margin-bottom: 30px;
+}
+.bookAndReview .inputDiv .textInput {
+  height: 40px;
+}
+.bookAndReview .title {
+  font: 24px poppinsBd;
+  margin-bottom: 30px;
+}
+.actionText {
+  font: 14px poppinsSb;
+  padding: 10px 0;
+  cursor: pointer;
+  color: var(--primaryBlue);
+}
+.checkDiv {
+  padding: 10px 0;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+}
+.checkDiv .checkCircle {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 1px solid var(--primaryBlue);
+  flex-shrink: 0;
+  margin-right: 10px;
+}
+.checkDivActive .checkCircle {
+  background-color: var(--primaryBlue);
+}
+.checkDiv .text {
+  font: 15px poppinsMd;
+}
+.mainModal {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+.mainModal .patientModalDiv {
+  width: 100%;
+  max-width: 500px;
+  min-height: 353px;
+  background-color: #fff;
+  padding: 30px;
+  overflow: auto;
+}
+.editAppointment .editBtn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font: 14px poppinsSb;
+  cursor: pointer;
+}
+.appointmentBooked .getStartedDiv {
+  box-shadow: rgb(0 0 0 / 12%) 0px 1px 4px, rgb(0 0 0 / 10%) 0px 3px 4px,
+    rgb(0 0 0 / 15%) 0px 1px 5px;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+}
+.appointmentBooked .getStartedDiv .logo {
+  width: 120px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.bookLoading .header {
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 0;
+  margin-top: 25px;
+}
+.bookLoading .header .logo {
+  width: 150px;
+}
+.bookLoading .header .title {
+  font: 20px poppinsSb;
+}
+.bookLoading .header .text {
+  font: 16px poppins;
+}
+.bookLoading .contentFlex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+}
+.bookLoading .contentFlex .title {
+  font: 18px poppinsSb;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.bookLoading .contentFlex .text {
+  font: 14px poppinsMd;
+  text-align: center;
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .mainModal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .mainModal .patientModalDiv {
+    max-height: 470px;
+    min-height: 353px;
+  }
+}

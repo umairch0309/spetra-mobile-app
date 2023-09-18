@@ -1,0 +1,41 @@
+.doctorFormWrapper {
+  max-width: 645px;
+}
+.settitngLabel {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  color: #828282;
+  font: 18px poppinsSb;
+}
+.settitngSubLabel {
+  margin-top: 10px;
+  margin-bottom: 14px;
+  color: #000000;
+  font: 14px poppinsSb;
+}
+
+.settingInput {
+  border: 0.5px solid #000;
+  min-height: 50px;
+  height: auto;
+  max-width: 645px;
+  width: 100%;
+  font: 14px poppins;
+  padding-left: 25px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+.settingInput::placeholder {
+  font: 14px poppins;
+}
+.settingPageWrapper .textInput,
+.doctorFormWrapper .textInput {
+  margin-bottom: 10px;
+  max-width: 645px;
+  width: 100%;
+  min-height: 30px;
+  height: auto;
+}
+.settingPageWrapper .textInput:focus {
+  border-bottom: none;
+}

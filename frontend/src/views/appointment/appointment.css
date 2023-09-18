@@ -1,0 +1,66 @@
+.ForwardRef-root-1 {
+  border-radius: 15px;
+}
+.classicTable {
+  margin-top: 10px;
+  overflow: auto;
+}
+.classicTable .table {
+  box-shadow: var(--shadow);
+  border-radius: 15px;
+  overflow: hidden;
+}
+.classicTable .table thead {
+  background-color: #fff !important;
+  height: 70px;
+
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.classicTable .table thead tr {
+  height: 70px;
+  margin-left: 20px;
+}
+.classicTable .table thead tr th {
+  vertical-align: middle;
+  font: 16px robotoBd;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.5);
+}
+.classicTable .nameImg {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.classicTable .table tbody tr td {
+  vertical-align: middle;
+  font: 13px roboto;
+  background-color: #fff;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.7);
+}
+.flexCenterCol {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+.MuiIconButton-label {
+  opacity: 0.7;
+}
+.MuiPaper-elevation1 {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1) !important;
+}
+.detailPage .header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+}
+.detailPage .header .profileImage {
+  width: 100px;
+}
+.detailPage .label {
+  font: 14px poppinsSb;
+}

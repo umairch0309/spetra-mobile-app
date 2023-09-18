@@ -1,0 +1,24 @@
+<%- include('include/head.ejs')%>
+<!-- content div -->
+<div>
+  <!-- paragraph or text div -->
+  Hello,
+  <br />
+  A <%= subject %> is booked of <br />
+  Slot ID : <b><%= slotId %></b> <br />
+  Start Time : <%= startDate %><br />
+  End Time : <%= endDate %><br />
+  Fee : $<%= fee %><br />
+  <b>Patient</b> <br />
+  Name : <%= patientName %> <br />
+  Email : <%= patientEmail %> <br />
+  <b>Doctor</b> <br />
+  Name : <%= doctorName %> <br />
+  Email : <%= doctorEmail %> <br />
+  <br />
+  If you have not requested this email, then ignore it.
+  <br />
+  We Thank You,<br />
+  CloudDoc
+</div>
+<%- include('include/end.ejs')%>

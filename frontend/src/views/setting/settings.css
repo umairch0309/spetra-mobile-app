@@ -1,0 +1,63 @@
+.imageWrapper {
+  position: relative;
+  width: fit-content;
+}
+.imageWrapper .profileImg {
+  height: 136px;
+  width: 136px;
+  border-radius: 50%;
+}
+.imageWrapper .uploadBtnDivWrapper {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+.imageWrapper .uploadBtnDiv {
+  border-radius: 50%;
+  height: 31px;
+  width: 31px;
+  border: 3px solid #fff;
+  background-color: #6bcae2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.settitngLabel {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  color: #828282;
+  font: 18px poppinsSb;
+}
+.settitngSubLabel {
+  margin-top: 10px;
+  margin-bottom: 14px;
+  color: #000000;
+  font: 14px poppinsSb;
+}
+
+.settingInput {
+  border: 0.5px solid #000;
+  min-height: 50px;
+  height: auto;
+  max-width: 645px;
+  width: 100%;
+  font: 14px poppins;
+  padding-left: 25px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+.settingInput::placeholder {
+  font: 14px poppins;
+}
+.settingPageWrapper .textInput,
+.doctorFormWrapper .textInput {
+  margin-bottom: 10px;
+  max-width: 645px;
+  width: 100%;
+  min-height: 30px;
+  height: auto;
+}
+.settingPageWrapper .textInput:focus {
+  border-bottom: none;
+}

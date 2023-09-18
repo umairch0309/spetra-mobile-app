@@ -1,0 +1,26 @@
+.dashboardMainDiv {
+  display: flex;
+  height: 100vh;
+}
+.dashboardMainDiv .headerSec {
+  position: relative;
+  width: 100%;
+}
+.dashboardMainDiv .contentMainSec {
+  padding: 20px 15px;
+  background-color: rgba(90, 209, 221, 0.05);
+  height: 88%;
+}
+.secDiv {
+  background-color: #fff;
+  border-radius: 32px;
+  padding: 20px;
+  box-shadow: var(--shadow);
+}
+.secTitle {
+  font: 24px poppins;
+  margin-bottom: 20px;
+}
+.contentRow {
+  padding: 30px 20px;
+}
