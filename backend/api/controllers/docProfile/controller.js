@@ -22,7 +22,7 @@ const DocForm = require("../../models/docform");
 
 const DocProfile = require("../../models/docprofile");
 
-const { doctorForm, newBookingEmail } = require("../../../helpers/emails");
+const { doctorForm, newBookingEmail, ApprovedDoctorForm } = require("../../../helpers/emails");
 const User = require("../../models/user");
 const docprofile = require("../../models/docprofile");
 const { clearConfigCache } = require("prettier");
@@ -71,7 +71,7 @@ exports.getDocProfile = async (req, res, next) => {
 // Create Doc Form
 exports.createDocForm = async (req, res, next) => {
   try {
-    const {
+    let {
       name,
       email,
       hospital,
@@ -99,11 +99,40 @@ exports.createDocForm = async (req, res, next) => {
       contactNo,
       languages,
       aboutMe,
-    };
+    }
 
     const docFormObject = new DocForm(data);
     const docForm = await docFormObject.save();
-    await doctorForm(email);
+    const docFormDoc = await adminServices.getDocFormById(docForm._id);
+    const docStatus = "approved";
+    const newdata = { ...docFormDoc.toObject(), status: "active" };
+
+    const randomNumber = Math.random().toString(36).substring(3);
+
+    // const new_hashed_password = await bcrypt.hash(randomNumber, 10);
+
+    const docprofileObject = DocProfoileService.docprofileObject(newdata);
+
+    const userObj = {
+      name: docFormDoc.name,
+      email: docFormDoc.email.toLowerCase(),
+      password: randomNumber,
+      type: "local",
+      role: "doctor",
+    };
+
+    const newUser = userService.userObject(userObj);
+
+    //Create Doc Profile
+    await DocProfoileService.saveDocProfile(docprofileObject);
+    //Create User
+    await userService.registerUser(newUser);
+    // Update Form Status
+    await adminServices.updateDocFormStatus(docForm._id, docStatus);
+
+    await ApprovedDoctorForm(docFormDoc.email, randomNumber);
+
+   
     return res
       .status(200)
       .json({ message: "Profile Created Successfully", data: docForm });

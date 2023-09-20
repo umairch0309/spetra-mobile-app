@@ -57,7 +57,15 @@ const doctorForm = async (email) => {
     html: emailTemplate,
   };
 
-  await sendgridTransport.send(data);
+  await sendgridTransport
+    .send(data)
+    .then((res) => {
+      console.log("Email Sent");
+      return res;
+    })
+    .catch((err) => {
+      console.log("Email did not  Send", err);
+    });
 };
 
 const ApprovedDoctorForm = async (email, password) => {
@@ -73,7 +81,15 @@ const ApprovedDoctorForm = async (email, password) => {
     html: emailTemplate,
   };
 
-  await sendgridTransport.send(data);
+  await sendgridTransport
+    .send(data)
+    .then((res) => {
+      console.log("Email Sent");
+      return res;
+    })
+    .catch((err) => {
+      console.log("Email did not  Send", err);
+    });
 };
 
 const DeclinedDoctorForm = async (email) => {
@@ -179,7 +195,15 @@ const newBookingEmail = async (
     html: emailTemplate,
   };
 
-  await sendgridTransport.send(data);
+  await sendgridTransport
+    .send(data)
+    .then((res) => {
+      console.log("Email Sent");
+      return res;
+    })
+    .catch((err) => {
+      console.log("Email did not  Send", err);
+    });
 };
 
 const sendVideoLink = async () => {
@@ -192,7 +216,15 @@ const sendVideoLink = async () => {
     text: videoLink,
   };
 
-  await sendgridTransport.send(data);
+  await sendgridTransport
+    .send(data)
+    .then((res) => {
+      console.log("Email Sent");
+      return res;
+    })
+    .catch((err) => {
+      console.log("Email did not  Send", err);
+    });
 };
 
 module.exports = {
